@@ -28,7 +28,7 @@ However, in the world of modern deep learning, problems arise with using high-di
 ### Simplical Complexes
 Simplical Complexes will play an extremely important role in this paper as it allows us to construct a geometric or abstract interpretation from our point cloud so that we can determine the topology as it passes through our network.
 
-**Simplex:** A $k$-dimensional simplex, or $k$-simplex, $\sigma$ in $\mathbb{R}^d$ is the convex hull of $k+1$ affinly independent points $v_0, v_1,~\cdots, v_k \in \mathbb{R}^d$, where $\sigma = \left[ v_0, v_1, \cdots, v_k \right]$.
+**Simplex:** A $k$-dimensional simplex, or $k$-simplex, $\sigma$ in $\mathbb{R}^d$ is the convex hull of $k+1$ affinely independent points $v_0, v_1,~\cdots, v_k \in \mathbb{R}^d$, where $\sigma = \left[ v_0, v_1, \cdots, v_k \right]$.
 XXX
 Additionally, we have a definition for the **Faces** of a simplex. That is
 
@@ -47,13 +47,19 @@ Abstract simplical complex?
 The *main issue with using this process to analyze neural networks given a certain dataset is the computational task.* That is, real-world datasets have an unknown topology, and thus requires exploration of a scale for $\varepsilon$ to be found via persistent homology. And so, computational needs are dramatically increased for real-world datasets.
 
 Additionally, with simulated data, we have clean data that does not need de-noising while realistic data requires this step. Lastly, this paper was done for "well-trained" neural networks which is unrealistic sometimes as the dataset may be sufficiently complicated and have a generalization error greater than what this method allows.
-### Simulated
+### Simulated Data
+For simulated data, we start with activation functions. Comparing the different activation functions, namely ReLU, Leaky ReLU, and hyperbolic tanh, there are some interesting patterns.
 
+Recall that tanh is a homeomorphism because XXX and that ReLU is not because YYY. However, the paper shows that ReLU actually simplifies topology a lot faster. This gives motivation to why you might not want to preserve the topological structure of the dataset. A similar thing happens with Leaky ReLU as it also simplifies the topology of our data but not as fast as a regular ReLU. This is shown in the graphs below:
+ZZZ
+Additionally, note that more complicated topological features cause our network to require more operations, that is layers. This is exacerbated when we use hyperbolic tanh as it tries to preserve its structure and so it takes longer to disentangle our input data into linearly separable manifolds.
+
+Although our intermediate layers are in high dimensions, that is the number of neurons, we can try to visualize what is going on by projecting our space onto the first two principal component axis via PCA.
 
 <!-- ### Homeomorphisms
 A function $f$, is said to be a homeomorphism if it satisfies
 f is bijective
 f is continuous
 f^-1 is continuous -->
-
-![eqn](https://latex.codecogs.com/gif.latex?%5Cint_1%5E2%20x%5E2%20%5C%2C%20dx%20%3D%203)
+<!-- 
+![eqn](https://latex.codecogs.com/gif.latex?%5Cint_1%5E2%20x%5E2%20%5C%2C%20dx%20%3D%203) -->
