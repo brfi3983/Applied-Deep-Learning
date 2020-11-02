@@ -56,4 +56,4 @@ f is bijective
 f is continuous
 f^-1 is continuous -->
 
-<!-- ![eqn](https://latex.codecogs.com/gif.latex?%5Cint_1%5E2%20x%5E2%20%5C%2C%20dx%20%3D%203) -->
+![eqn](https://latex.codecogs.com/gif.latex?%5Cint_1%5E2%20x%5E2%20%5C%2C%20dx%20%3D%203)
