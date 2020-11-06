@@ -1,0 +1,4 @@
+# Brandon Finley
+For my first report, I set up a scientific computing account with CU Boulder's Research Computing Lab. This utilizes the resources for training so that I can more freely experiment or derive results as I do not have to wait multiple hours to train a network just to see what effect has taken place. This allows allows for exhuastive grid searches or multiple models to run to see which is the best for the task (traditional or deep). In addition, I would like to setup parallel computing or further research CU Boulder's resources so that I can run my algorithm most efficiently. This would be another good project to look into.
+
+This is a valuable report to start off the year so that I can use it on subsequent reports or projects. Feel free to share to others in the class so that they may be able to benefit as well.
