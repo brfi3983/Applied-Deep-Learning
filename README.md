@@ -6,4 +6,4 @@ In this repo, I will store the reports being done throughout the semester. The r
 * [Report3](/Report3/Report3.md) (PyTorch with CIFAR10)
 * [Report4](/Report4/report4.md) (PyTorch Lightning with SLURM)
 * [Report5](/Report5/report5.md) (Topology of Deep Neural Networks)
-* [Report6](/Report6/report6.md) (Visualizing Neural Networks)
+* [Report6](/Report6/Report6.md) (Visualizing Neural Networks)
