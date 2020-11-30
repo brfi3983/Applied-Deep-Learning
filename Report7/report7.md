@@ -22,7 +22,7 @@ Again, the goal of the decoder is to reconstruct the image in its spatial region
 
 Upsampling by a **[nearest neighbor](https://www.youtube.com/watch?v=AqscP7rc8_M&ab_channel=Computerphile)** or **[bilinear interpolation](https://www.youtube.com/watch?v=AqscP7rc8_M&ab_channel=Computerphile)** is the simplest method. This does not learn anything new, but rather just "smooths" out or "repeats" the image as it is projected into a larger size.
 
-![NN_bi](NN_bi.png)
+![NN_bi](./resources/NN_bi.png)
 
 **Max Unpooling** is a bit smarter as it remembers the indices where the most active neuron was captured. And so, you can place the maximum value back where it was captured and zero out all the other indicies within the max pooling kernel size.
 
