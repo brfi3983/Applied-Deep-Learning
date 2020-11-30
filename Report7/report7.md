@@ -104,6 +104,7 @@ Finally, one can choose to encode the different classes with RGB values, or do w
 You will also notice that all of these are a fairly large size; however, you can redefine your transform variable to center crop or resize for a balance of model efficiency or accuracy.
 
 First we have a photo of a bird.
+
 ![b_out](./resources/bird_out.png)
 
 Below, you will notice that the size our the output for a single batch and 21 classes, matches the output size of 800x800. You will also notice that it detected classes 0 (unlabelled) and 3 (bird).
@@ -117,6 +118,7 @@ Output shape: torch.Size([1, 21, 800, 800])
 ```
 
 Next, we have a person jumping up on a rock.
+
 ![p_out](./resources/person_out.png)
 
 As we fixed the transformation, the output size is the same. However, you will notice that the classes detected are now 0 (unlabelled), 3 (bird), and 15 (person).
@@ -130,6 +132,7 @@ Output shape: torch.Size([1, 21, 800, 800])
 ```
 
 Lastly, we have a fun yet slightly more challenging picture.
+
 ![d_out](./resources/dog_out.png)
 
 Again, the spatial dimensions are the same. However, here it detects are 0 (unlabelled), 8 (cat), 10 (cow), 12 (dog), and 18 (sofa).
