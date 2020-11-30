@@ -25,7 +25,9 @@ Upsampling by a **[nearest neighbor](https://www.youtube.com/watch?v=AqscP7rc8_M
 ![NN_bi](NN_bi.png)
 
 **Max Unpooling** is a bit smarter as it remembers the indices where the most active neuron was captured. And so, you can place the maximum value back where it was captured and zero out all the other indicies within the max pooling kernel size.
+
 ![unpool](./resources/max_unpooling.png)
+
 **[Transposed Convolutions](https://blog.paperspace.com/transpose-convolution/)**, however, give one the most flexibility as the kernels used can actually be learned. Thus, you can find *the best upsampling* kernel for a particular image. This commonly yields better results and is the reason why it was picked in the FCN paper.
 
 This is done by essentially multiply the filter with the input image and summing up the different locations into a final upsampled image. An example of a transposed convolution is below.
