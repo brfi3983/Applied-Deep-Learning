@@ -1,0 +1,36 @@
+
+	# Style Attributes
+	content_layer = {'34': 'conv5_4'}
+	# content_layer = {'2': 'conv1_2'}
+	style_layers = {'0': 'conv1_1',
+				  '5': 'conv2_1',
+				  '10': 'conv3_1',
+				  '19': 'conv4_1',
+				  '28': 'conv5_1'}
+
+	s_weights = {'conv1_1': 1.5,
+				 'conv2_1': 0.80,
+				 'conv3_1': 0.25,
+				 'conv4_1': 0.25,
+				 'conv5_1': 0.25}
+
+
+	# ====================== HARDCODE THESE COMBINATIONS!!!!! =======================
+
+	# Overall Loss Style vs. Content Weights
+	c_weight = 1e3
+	s_weight = 1e6
+	color_weight = 1
+
+
+	# Transform settings
+	trf = T.Compose([T.Resize(600),
+					T.ToTensor(),
+					T.Normalize(mean=[0.485, 0.456, 0.406],
+								std=[0.229, 0.224, 0.225])])
+
+
+	# General Model
+	epochs = 1000
+	leaky = 0
+	tanh = 1
